@@ -1,0 +1,16 @@
+{
+  "name": "ca-final-study-ledger",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CA Final Study Ledger Mobile App (Capacitor Android Build)",
+  "scripts": {
+    "prepare-www": "node -e \"const fs=require('fs');fs.rmSync('www',{recursive:true,force:true});fs.mkdirSync('www',{recursive:true});for(const f of ['index.html','manifest.json','sw.js'])fs.copyFileSync(f,'www/'+f);fs.cpSync('icons','www/icons',{recursive:true});\"",
+    "cap:sync": "npm run prepare-www && cap sync android",
+    "android:build": "npm run cap:sync && cd android && ./gradlew assembleDebug"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^6.0.0",
+    "@capacitor/cli": "^6.0.0",
+    "@capacitor/core": "^6.0.0"
+  }
+}

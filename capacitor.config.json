@@ -1,0 +1,17 @@
+{
+  "appId": "com.lohiya.cafinalledger",
+  "appName": "CA Final Study Ledger",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https",
+    "allowNavigation": [
+      "*.firebaseapp.com",
+      "*.googleapis.com",
+      "*.gstatic.com",
+      "*.google.com"
+    ]
+  },
+  "android": {
+    "allowMixedContent": false
+  }
+}

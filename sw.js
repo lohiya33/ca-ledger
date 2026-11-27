@@ -1,5 +1,5 @@
 // CA Final Study Ledger — Service Worker
-const CACHE_NAME = 'ca-ledger-v2';
+const CACHE_NAME = 'ca-ledger-v5';
 
 const PRECACHE_ASSETS = [
   './',
@@ -44,7 +44,7 @@ self.addEventListener('fetch', event => {
   if (event.request.mode === 'navigate') {
     event.respondWith(
       fetch(event.request).catch(() => {
-        return caches.match('./index.html') || caches.match('./');
+        return caches.match('./index.html', {ignoreSearch: true}) || caches.match('./');
       })
     );
     return;
